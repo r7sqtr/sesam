@@ -1,4 +1,6 @@
-<img src="src-tauri/icons/icon.png" width="96" alt="sesam">
+<div align="center">
+<img src="src-tauri/icons/icon.png" width="160" alt="sesam">
+</div>
 
 # sesam
 macOS用のファイルマネージャ
