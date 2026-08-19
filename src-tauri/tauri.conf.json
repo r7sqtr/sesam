@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "sesam",
+  "version": "0.1.0",
+  "identifier": "com.r7sqtr.sesam",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "sesam",
+        "width": 1100,
+        "height": 700,
+        "visible": false,
+        "decorations": false,
+        "transparent": true,
+        "resizable": true,
+        "minWidth": 640,
+        "minHeight": 400,
+        "windowEffects": {
+          "effects": ["popover"],
+          "radius": 14
+        },
+        "shadow": true,
+        "skipTaskbar": true,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' asset: http://asset.localhost data: blob:; media-src 'self' asset: http://asset.localhost blob:; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost asset: http://asset.localhost; worker-src 'self' blob:; frame-src 'self' asset: http://asset.localhost blob:; object-src 'none'",
+      "assetProtocol": {
+        "enable": true,
+        "scope": {
+          "allow": ["$HOME/**", "/Volumes/**", "/tmp/**", "/private/tmp/**"],
+          "deny": [
+            "$HOME/Library/**",
+            "$HOME/.ssh/**",
+            "$HOME/.aws/**",
+            "$HOME/.gnupg/**",
+            "$HOME/.config/**",
+            "$HOME/.kube/**"
+          ]
+        }
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
