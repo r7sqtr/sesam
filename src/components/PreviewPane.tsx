@@ -278,8 +278,8 @@ function TextPreview({ entry }: { entry: Entry }) {
             if (!cancelled) {
               setHtml(highlighted);
             }
-          } catch {
-            /* プレーン表示にフォールバック */
+          } catch (error) {
+            console.error("シンタックスハイライトに失敗しました", error);
           }
         }
       })

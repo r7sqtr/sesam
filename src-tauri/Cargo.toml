@@ -1,6 +1,6 @@
 [package]
 name = "sesam"
-version = "0.1.0"
+version = "0.1.1"
 description = "Summonable file manager for macOS"
 authors = ["r7sqtr"]
 edition = "2021"
